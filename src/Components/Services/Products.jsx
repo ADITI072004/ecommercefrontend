@@ -18,6 +18,7 @@ import {useNavigate} from 'react-router-dom'
 function Products() {
   const [products, setproducts] = useState([]);
   const [Search,setSearch] = useState("")
+  const [categoryfilter,setcategoryfilter] = useState("")
   const nav = useNavigate();
 
 
@@ -36,6 +37,7 @@ function Products() {
       );
       if (response.ok) {
         const data = await response.json();
+        console.log(data)
         setproducts(data)
       } else {
         alert("Something went wrong please login again");
@@ -63,13 +65,16 @@ useEffect(() => {
             setSearch(e.target.value)
           }}/>
 					<div className="ms:flex items-center px-2 rounded-lg space-x-4 mx-auto ">
-						<select id="Com" className="text-base text-gray-800 outline-none border-2 px-4 py-2 rounded-lg">
-            <option value="com" selected>electronics</option>
-            <option value="net">jewelery</option>
-            <option value="org">men's clothing</option>
-            <option value="io">women's clothing</option>
+						<select id="Com" className="text-base text-gray-800 outline-none border-2 px-4 py-2 rounded-lg" onChange={(e)=>{
+            setcategoryfilter(e.target.value)
+          }}>
+            <option value="" selected>All</option>
+            <option value="electronics">electronics</option>
+            <option value="jwellery">jewelery</option>
+            <option value="men">men's clothing</option>
+            <option value="women">women's clothing</option>
           </select>
-						<button className="bg-indigo-500 text-white text-base rounded-lg px-4 py-2 my-1 font-thin">Search</button>
+						{/* <button className="bg-indigo-500 text-white text-base rounded-lg px-4 py-2 my-1 font-thin">Search</button> */}
 					</div>
 				</div>
 		</form>
@@ -77,7 +82,7 @@ useEffect(() => {
 </div>
 <div className="container mx-auto grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 pt-3 gap-8 w-[90%] " role="group">
          {
-          products.filter((e)=>(e.title.toLowerCase().includes(Search.toLowerCase()))).map(products =>(
+          products.filter((e)=>(e.category.toLowerCase().includes(categoryfilter.toLowerCase()))).filter((e)=>(e.title.toLowerCase().includes(Search.toLowerCase()))).map(products =>(
             <a href='' onClick={
               (e) => {
                 nav('/product', { state: { id: products._id,cat:products.category} });

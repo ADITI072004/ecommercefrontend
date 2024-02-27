@@ -103,7 +103,7 @@ function Product() {
           alert("Added");
           setisincart(true)
         } else {
-          alert("Already exist");
+          alert("Something went wrong please try again");
         }
       } catch (error) {
         console.error("Error during login:", error);
