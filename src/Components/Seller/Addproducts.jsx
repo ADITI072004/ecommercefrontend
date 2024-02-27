@@ -9,16 +9,15 @@ function Edit() {
   const [description, setdescription] = useState("");
   const [image, setimage] = useState("");
   const [category, setcategory] = useState("");
-  const [image1, setimage1] = useState(null);
   const [textoimage, settextoimage] = useState("");
   const [error, setError] = useState(""); // Track form validation error
   const navigate = useNavigate();
 
   
-  const handleuploadimage = async() =>{
+  const handleuploadimage = async(e) =>{
     const imageRef = ref(storage, title);
-    if (image1) {
-        uploadBytes(imageRef, image1).then(() => {
+    if (e) {
+        uploadBytes(imageRef, e).then(() => {
             getDownloadURL(imageRef).then((url) => {
                 setimage(url);
                 alert("Image Uploaded")
@@ -34,11 +33,7 @@ function Edit() {
     }
   }
 
-  function handleChange(event) {
-      setimage1(event.target.files[0]);
-settextoimage("Image selected");
-handleuploadimage();
-  }
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -155,7 +150,10 @@ handleuploadimage();
           >
             Product's Image
           </label>
-          <input type="file" onChange={handleChange}/>
+          <input type="file" onChange={(e)=>{
+            handleuploadimage(e.target.files[0])
+            settextoimage("Image selected");
+          }}/>
         </div> 
         <button
           type="submit"
