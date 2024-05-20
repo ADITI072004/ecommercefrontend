@@ -5,13 +5,13 @@ import {getFirestore} from "firebase/firestore";
 import {getStorage} from "firebase/storage";
 
 const firebaseConfig = {
-    apiKey: process.env.REACT_APP_APIKEY,
-    authDomain: process.env.REACT_APP_AUTHDOMAIN,
-    projectId: process.env.REACT_APP_PROJECTID,
-    storageBucket: process.env.REACT_APP_STORAGEBUCKET,
-    messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,
-    appId: process.env.REACT_APP_APPID,
-    measurementId: process.env.REACT_APP_MEASUREMENTID
+    apiKey: "AIzaSyBFRJYKFyR_IP8yx6K0D_M_QGEAG9n-1Wg",
+    authDomain: "ecommerce-eaa30.firebaseapp.com",
+    projectId: "ecommerce-eaa30",
+    storageBucket: "ecommerce-eaa30.appspot.com",
+    messagingSenderId: "142306608250",
+    appId: "1:142306608250:web:8b732caefb3ea5ae8ae7c3",
+    measurementId: "G-FPWN0HVL15"
 };
 
 const app = initializeApp(firebaseConfig);
