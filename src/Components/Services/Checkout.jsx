@@ -33,7 +33,7 @@ function Checkout() {
       console.log(JSON.stringify({userid,productid,date,orderid,quantity,cod}))
         try {
       const response = await fetch(
-        "https://e-cartbackend.onrender.com/addtoorders",
+        "https://eombackend.onrender.com/addtoorders",
         {
           method: "POST",
           headers: {
@@ -59,7 +59,7 @@ function Checkout() {
     try {
       const sessionToken=localStorage.getItem("token");
   const response = await fetch(
-    "https://e-cartbackend.onrender.com/users",
+    "https://eombackend.onrender.com/users",
     {
       method: "POST",
       headers: {
@@ -85,7 +85,7 @@ function Checkout() {
     const fetchData1 = async () => {
       try {
         const response = await fetch(
-          "https://e-cartbackend.onrender.com/getproducts",
+          "https://eombackend.onrender.com/getproducts",
           {
             method: "GET",
             headers: {

@@ -41,7 +41,7 @@ function Edit() {
     const userid = localStorage.getItem("userId");
     try {
       const response = await fetch(
-        `https://e-cartbackend.onrender.com/addtoproducts`,
+        `https://eombackend.onrender.com/addtoproducts`,
         {
           method: "POST",
           headers: {

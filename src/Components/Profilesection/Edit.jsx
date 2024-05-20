@@ -16,7 +16,7 @@ function Edit() {
     try {
         const id = localStorage.getItem("userId");
         const sessionToken=localStorage.getItem("token");
-        const response = await fetch(`https://e-cartbackend.onrender.com/updateusers/${id}`, {
+        const response = await fetch(`https://eombackend.onrender.com/updateusers/${id}`, {
           method: "PATCH",
           headers: {
             "Content-Type": "application/json",

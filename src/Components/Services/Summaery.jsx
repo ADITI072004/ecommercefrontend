@@ -14,7 +14,7 @@ function Summaery() {
     const fetchData2 = async () => {
         try {
       const response = await fetch(
-        "https://e-cartbackend.onrender.com/getorders",
+        "https://eombackend.onrender.com/getorders",
         {
           method: "GET",
           headers: {
@@ -37,7 +37,7 @@ function Summaery() {
     try {
       const sessionToken=localStorage.getItem("token");
   const response = await fetch(
-    "https://e-cartbackend.onrender.com/users",
+    "https://eombackend.onrender.com/users",
     {
       method: "POST",
       headers: {
@@ -64,7 +64,7 @@ function Summaery() {
     const fetchData1 = async () => {
         try {
             const response = await fetch(
-              "https://e-cartbackend.onrender.com/getproducts",
+              "https://eombackend.onrender.com/getproducts",
               {
                 method: "GET",
                 headers: {

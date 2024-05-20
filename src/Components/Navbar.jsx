@@ -49,7 +49,7 @@ const Navbar = () => {
   const fetchData2 = async () => {
     try {
   const response = await fetch(
-    "https://e-cartbackend.onrender.com/getsellers",
+    "https://eombackend.onrender.com/getsellers",
     {
       method: "GET",
       headers: {

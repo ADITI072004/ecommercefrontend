@@ -23,7 +23,7 @@ function Product2() {
   const fetchData1 = async () => {
     try {
       const response = await fetch(
-        "https://e-cartbackend.onrender.com/getproducts",
+        "https://eombackend.onrender.com/getproducts",
         {
           method: "GET",
           headers: {

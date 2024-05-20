@@ -21,7 +21,7 @@ function Manage() {
   const fetchData2 = async () => {
     try {
   const response = await fetch(
-    "https://e-cartbackend.onrender.com/getproducts",
+    "https://eombackend.onrender.com/getproducts",
     {
       method: "GET",
       headers: {
@@ -43,7 +43,7 @@ function Manage() {
   const fetchData = async () => {
     try {
         const response = await fetch(
-          "https://e-cartbackend.onrender.com/getsellers",
+          "https://eombackend.onrender.com/getsellers",
           {
             method: "GET",
             headers: {
@@ -65,7 +65,7 @@ function Manage() {
   const remove = async (id) => {
     try {
     const response = await fetch(
-      `https://e-cartbackend.onrender.com/deleteproducts/${id}`,
+      `https://eombackend.onrender.com/deleteproducts/${id}`,
       {
         method: "DELETE",
         headers: {

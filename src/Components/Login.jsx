@@ -14,7 +14,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await fetch(
-        "https://e-cartbackend.onrender.com/auth/login",
+        "https://eombackend.onrender.com/auth/login",
         {
           method: "POST",
           headers: {

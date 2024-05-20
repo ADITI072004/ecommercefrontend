@@ -26,7 +26,7 @@ const SellRegister = () => {
     e.preventDefault();
     const userid = localStorage.getItem("userId");
     try {
-      const response = await fetch("https://e-cartbackend.onrender.com/addtosellers", {
+      const response = await fetch("https://eombackend.onrender.com/addtosellers", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

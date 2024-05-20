@@ -22,7 +22,7 @@ function Profile() {
   const fetchData2 = async () => {
     try {
   const response = await fetch(
-    "https://e-cartbackend.onrender.com/getorders",
+    "https://eombackend.onrender.com/getorders",
     {
       method: "GET",
       headers: {
@@ -45,7 +45,7 @@ function Profile() {
     try {
       const sessionToken=localStorage.getItem("token");
   const response = await fetch(
-    "https://e-cartbackend.onrender.com/users",
+    "https://eombackend.onrender.com/users",
     {
       method: "POST",
       headers: {

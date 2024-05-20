@@ -31,7 +31,7 @@ function Product() {
     const fetchData = async () => {
         try {
             const response = await fetch(
-              "https://e-cartbackend.onrender.com/getproducts",
+              "https://eombackend.onrender.com/getproducts",
               {
                 method: "GET",
                 headers: {
@@ -53,7 +53,7 @@ function Product() {
     const fetchData1=async()=>{
         try {
             const response = await fetch(
-              "https://e-cartbackend.onrender.com/getCart",
+              "https://eombackend.onrender.com/getCart",
               {
                 method: "GET",
                 headers: {
@@ -88,7 +88,7 @@ function Product() {
         try {
             const userid = localStorage.getItem("userId");
         const response = await fetch(
-          "https://e-cartbackend.onrender.com/addtocart",
+          "https://eombackend.onrender.com/addtocart",
           {
             method: "POST",
             headers: {
@@ -113,7 +113,7 @@ function Product() {
     const remove = async () => {
         try {
         const response = await fetch(
-          `https://e-cartbackend.onrender.com/deleteCart/${location.state.objid}`,
+          `https://eombackend.onrender.com/deleteCart/${location.state.objid}`,
           {
             method: "DELETE",
             headers: {
